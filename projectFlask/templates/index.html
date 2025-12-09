@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+    <style>
+        body { background:#ffeef5; font-family:sans-serif; margin:0; }
+        #main-container { display:flex; width:80%; margin:20px auto; } /* AJOUT/MODIF */
+        #chat-area { flex-grow: 1; } /* AJOUT/MODIF */
+        #chat { background:white; height:400px;
+                padding:10px; border:1px solid #ccc; overflow-y:auto; margin-right: 10px; } /* MODIF */
+        #input { margin:10px 0; display:flex; } /* MODIF */
+        input { flex:1; padding:8px; }
+        button { padding:8px; }
+
+        #user-list-container {
+            width: 200px;
+            background: #e6f7ff; /* Légère couleur de fond */
+            padding: 10px;
+            border: 1px solid #cceeff;
+            height: 420px; /* Aligné avec la hauteur du chat */
+            overflow-y: auto;
+        }
+        #user-list-container h3 { margin-top: 0; }
+    </style>
+</head>
+<body>
+    <h1>Web chat avec le groupe<h1>
+
+<div id="main-container">
+    <div id="chat-area">
+        <div id="chat"></div>
+
+        <div id="input">
+            <input id="field" type="text" placeholder="Entrer votre pseudo...">
+            <button onclick="send()">OK</button>
+        </div>
+    </div>
+    <div id="user-list-container">
+        <h3>Utilisateurs Connectés</h3>
+        <ul id="user-list"></ul>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.min.js"></script>
+<script src="/static/script.js"></script>
+
+</body>
+</html>

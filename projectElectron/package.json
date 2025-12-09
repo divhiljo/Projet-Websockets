@@ -1,0 +1,18 @@
+{
+  "name": "chat-local-electron",
+  "version": "1.0.0",
+  "description": "Application de chat local avec Electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron ."
+  },
+  "keywords": ["electron", "chat", "local"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^28.0.0",
+    "ws": "^8.16.0"
+  }
+}
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Local</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h3>Utilisateurs connectés</h3>
+            <div id="usersList" class="users-list"></div>
+        </div>
+        
+        <div class="main-content">
+            <div id="chatArea" class="chat-area"></div>
+            
+            <div class="input-area">
+                <div id="serverPrompt" class="server-prompt">
+                    <input type="text" id="serverInput" placeholder="Adresse IP du serveur (ex: 192.168.1.100)" value="localhost" />
+                    <button id="serverSubmit">Se connecter</button>
+                </div>
+                
+                <div id="pseudoPrompt" class="pseudo-prompt" style="display: none;">
+                    <input type="text" id="pseudoInput" placeholder="Entrez votre pseudo" />
+                    <button id="pseudoSubmit">Valider</button>
+                </div>
+                
+                <div id="messageInput" class="message-input" style="display: none;">
+                    <input type="text" id="messageField" placeholder="Tapez votre message (ou @user pour message privé)" />
+                    <button id="sendButton">Envoyer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="renderer.js"></script>
+</body>
+</html>
+
